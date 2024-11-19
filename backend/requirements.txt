@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pymongo[srv]
+python-dotenv
+requests
+together
+python-multipart
+bson
+reportlab

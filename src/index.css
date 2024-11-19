@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors */
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-primary-light: #dbeafe;
+    
+    /* Text Colors */
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-tertiary: #6b7280;
+    --text-light: #9ca3af;
+    
+    /* Status Colors */
+    --status-success: #22c55e;
+    --status-success-light: #dcfce7;
+    --status-warning: #eab308;
+    --status-warning-light: #fef9c3;
+    --status-error: #ef4444;
+    --status-error-light: #fee2e2;
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    
+    /* Border Colors */
+    --border-primary: #e5e7eb;
+    --border-secondary: #d1d5db;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--color-primary)] 
+           hover:bg-[var(--color-primary-hover)] 
+           text-white 
+           font-medium 
+           px-4 
+           py-2 
+           rounded-md 
+           transition-colors 
+           duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-white 
+           border 
+           border-[var(--border-secondary)] 
+           text-[var(--text-secondary)] 
+           hover:bg-[var(--bg-secondary)] 
+           font-medium 
+           px-4 
+           py-2 
+           rounded-md 
+           transition-colors 
+           duration-200;
+  }
+
+  .input-primary {
+    @apply border 
+           border-[var(--border-secondary)] 
+           rounded-md 
+           focus:ring-2 
+           focus:ring-[var(--color-primary)] 
+           focus:border-transparent 
+           w-full 
+           px-4 
+           py-2;
+  }
+
+  .card {
+    @apply bg-[var(--bg-primary)] 
+           rounded-lg 
+           shadow-sm 
+           border 
+           border-[var(--border-primary)] 
+           p-6;
+  }
+
+  .status-badge {
+    @apply inline-flex 
+           items-center 
+           px-2.5 
+           py-0.5 
+           rounded-full 
+           text-xs 
+           font-medium;
+  }
+
+  .status-badge-success {
+    @apply bg-[var(--status-success-light)] 
+           text-[var(--status-success)];
+  }
+
+  .status-badge-warning {
+    @apply bg-[var(--status-warning-light)] 
+           text-[var(--status-warning)];
+  }
+
+  .status-badge-error {
+    @apply bg-[var(--status-error-light)] 
+           text-[var(--status-error)];
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r 
+           from-[var(--color-primary)] 
+           to-[var(--color-primary-hover)] 
+           bg-clip-text 
+           text-transparent;
+  }
+
+  .form-label {
+    @apply block 
+           text-sm 
+           font-medium 
+           text-[var(--text-secondary)] 
+           mb-1;
+  }
+
+  .form-input {
+    @apply input-primary;
+  }
+
+  .form-group {
+    @apply space-y-1;
+  }
+
+  .page-container {
+    @apply max-w-7xl 
+           mx-auto 
+           px-4 
+           sm:px-6 
+           lg:px-8 
+           py-6;
+  }
+
+  .section-title {
+    @apply text-lg 
+           font-medium 
+           text-[var(--text-primary)] 
+           mb-4;
+  }
+
+  .flex-center {
+    @apply flex 
+           items-center 
+           justify-center;
+  }
+
+  .icon-button {
+    @apply p-2 
+           text-[var(--text-secondary)] 
+           hover:text-[var(--text-primary)] 
+           rounded-full 
+           hover:bg-[var(--bg-secondary)] 
+           transition-colors 
+           duration-200;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .bg-primary {
+    background-color: var(--bg-primary);
+  }
+  
+  .bg-secondary {
+    background-color: var(--bg-secondary);
+  }
+  
+  .border-primary {
+    border-color: var(--border-primary);
+  }
+}

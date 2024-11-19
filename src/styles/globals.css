@@ -1,0 +1,67 @@
+:root {
+  --bg-primary: #1E1E1E;
+  --bg-secondary: #2D2D2D;
+  --bg-tertiary: #383838;
+  --text-primary: #FFFFFF;
+  --text-secondary: #E0E0E0;
+  --border-primary: #404040;
+  --color-primary: #FFA726;
+  --color-primary-hover: #F57C00;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.btn-primary {
+  @apply bg-[#FFA726] hover:bg-[#F57C00] text-white;
+}
+
+.btn-secondary {
+  @apply bg-[#2D2D2D] hover:bg-[#383838] text-white border border-[#404040];
+}
+
+/* Update status badges */
+.status-badge {
+  @apply px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-badge-success {
+  @apply bg-green-900/20 text-green-400;
+}
+
+.status-badge-warning {
+  @apply bg-[#FFA726]/20 text-[#FFA726];
+}
+
+.status-badge-error {
+  @apply bg-red-900/20 text-red-400;
+}
+
+/* Card styles */
+.card {
+  @apply bg-[#2D2D2D] rounded-lg border border-[#404040] p-4;
+}
+
+/* Section titles */
+.section-title {
+  @apply text-lg font-semibold text-white mb-4;
+}
+
+/* Table styles */
+table thead {
+  @apply bg-[#2D2D2D];
+}
+
+table thead th {
+  @apply text-[#E0E0E0];
+}
+
+table tbody {
+  @apply bg-[#1E1E1E];
+}
+
+table tbody tr:hover {
+  @apply bg-[#383838];
+} 
